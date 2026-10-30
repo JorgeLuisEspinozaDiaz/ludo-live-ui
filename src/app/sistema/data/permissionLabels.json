@@ -1,0 +1,49 @@
+{
+  "menuOrder": ["SISTEMA"],
+  "moduleIcons": {
+    "Usuarios": "UsersRound",
+    "Roles": "Shield",
+    "Permisos": "KeyRound",
+    "Configuración": "Settings"
+  },
+  "groupIcons": {
+    "SISTEMA": "Settings",
+    "OTROS": "Shield"
+  },
+  "pathPlacement": [
+    { "match": "^/permissions", "menu": "SISTEMA", "module": "Roles" },
+    { "match": "^/roles", "menu": "SISTEMA", "module": "Roles" },
+    { "match": "^/users", "menu": "SISTEMA", "module": "Usuarios" },
+    { "match": "^/menus", "menu": "SISTEMA", "module": "Configuración" },
+    { "match": "^/sections", "menu": "SISTEMA", "module": "Configuración" },
+    { "match": "^/tenant", "menu": "SISTEMA", "module": "Configuración" }
+  ],
+  "resources": {
+    "users": { "singular": "usuario", "plural": "usuarios" },
+    "roles": { "singular": "rol", "plural": "roles" },
+    "permissions": { "singular": "permiso", "plural": "permisos" },
+    "menus": { "singular": "menú", "plural": "menús" },
+    "sections": { "singular": "sección de menú", "plural": "secciones de menú" },
+    "tenant/config": {
+      "singular": "configuración",
+      "plural": "configuración",
+      "listLabel": "Ver configuración",
+      "updateLabel": "Editar configuración"
+    }
+  },
+  "actions": {
+    "list": { "label": "Ver listado", "description": "Consultar registros", "icon": "List", "order": 1 },
+    "detail": { "label": "Ver detalle", "description": "Abrir ficha", "icon": "Eye", "order": 2 },
+    "create": { "label": "Crear", "description": "Registrar nuevo", "icon": "Plus", "order": 3 },
+    "update": { "label": "Editar", "description": "Modificar datos", "icon": "Pencil", "order": 4 },
+    "status": { "label": "Cambiar estado", "description": "Activar o desactivar", "icon": "ToggleLeft", "order": 5 },
+    "delete": { "label": "Eliminar", "description": "Borrar registro", "icon": "Trash2", "order": 6 },
+    "view": { "label": "Ver", "description": "Solo lectura", "icon": "Eye", "order": 1 },
+    "manage": { "label": "Gestionar", "description": "Administrar", "icon": "Pencil", "order": 3 },
+    "other": { "label": "Otra acción", "description": "Acción adicional", "icon": "Shield", "order": 99 }
+  },
+  "coarseLabels": {
+    "staff.manage": { "label": "Gestionar usuarios", "description": "Usuarios del sistema" },
+    "system.admin": { "label": "Administrar sistema", "description": "Roles y configuración" }
+  }
+}

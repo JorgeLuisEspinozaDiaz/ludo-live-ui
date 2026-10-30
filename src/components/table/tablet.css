@@ -1,0 +1,13 @@
+.first-border {
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+th {
+  font-weight: 600;
+}
+
+table {
+  /* border-collapse: separate;
+  border-spacing: 0; */
+}
