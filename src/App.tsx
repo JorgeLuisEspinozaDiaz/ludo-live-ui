@@ -1,14 +1,10 @@
-import { Toaster } from "sonner";
-import "./App.css";
-import RouterIndex from "./router/RouterIndex";
+import { AppProviders } from "@/app/providers";
+import { AppRouter } from "@/app/router";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <RouterIndex />
-      <Toaster richColors position="top-right" visibleToasts={1} />
-    </>
+    <AppProviders>
+      <AppRouter />
+    </AppProviders>
   );
 }
-
-export default App;

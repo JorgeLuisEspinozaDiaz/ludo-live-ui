@@ -12,10 +12,14 @@ dist
 dist-ssr
 *.local
 
+# LiveKit local binary (descargado por scripts/start-livekit.ps1)
+tools/livekit/
+
 # Env / secrets
 .env
 .env.*
 !.env.example
+ADMIN-CONFIDENCIAL.md
 
 # Editor directories and files
 .vscode/*

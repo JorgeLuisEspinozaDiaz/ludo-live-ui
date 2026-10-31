@@ -1,0 +1,26 @@
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        VITE_API_URL: /api
+        VITE_SOCKET_URL: ""
+        VITE_LIVEKIT_URL: ${VITE_LIVEKIT_URL:-ws://localhost:7880}
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - ludo
+
+  # Referencia: el backend vive en el repo hermano.
+  # Levanta el stack completo con el docker-compose del backend + este servicio.
+  backend:
+    image: ludo-live-core:latest
+    profiles: ["full"]
+    networks:
+      - ludo
+
+networks:
+  ludo:
+    driver: bridge
